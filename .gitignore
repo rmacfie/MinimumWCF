@@ -1,0 +1,7 @@
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.cache
+_ReSharper*/
+[Bb]uild/
