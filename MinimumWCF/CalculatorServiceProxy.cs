@@ -2,16 +2,16 @@
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 
-namespace MinimumWCF.Shared
+namespace MinimumWCF
 {
-	public class CalculatorProxy : ClientBase<ICalculator>, ICalculator
+	public class CalculatorServiceProxy : ClientBase<ICalculatorService>, ICalculatorService
 	{
-		public CalculatorProxy(string url) : base(GetBinding(url), GetEndpointAddress(url))
+		public CalculatorServiceProxy(string url) : base(GetBinding(url), GetEndpointAddress(url))
 		{
 		}
 
 
-		#region ICalculator Members
+		#region ICalculatorService Members
 
 		public int Add(int number, int otherNumber)
 		{

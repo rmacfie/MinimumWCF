@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D314BE57-29C6-4966-A786-0AC58D698364}</ProjectGuid>
+    <ProjectGuid>{4DC085D9-CF77-4F3C-B65F-40A5C4F5A4FE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MinimumWCF.Service.ConsoleHost</RootNamespace>
-    <AssemblyName>MinimumWCF.Service.ConsoleHost</AssemblyName>
+    <RootNamespace>MinimumWCF.ConsoleClient</RootNamespace>
+    <AssemblyName>MinimumWCF.ConsoleClient</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -43,13 +43,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MinimumWCF.Shared\MinimumWCF.Shared.csproj">
+    <ProjectReference Include="..\MinimumWCF\MinimumWCF.csproj">
       <Project>{EBA74A09-B8C4-49E8-A19C-4B264061B11F}</Project>
-      <Name>MinimumWCF.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MinimumWCF.Service\MinimumWCF.Service.csproj">
-      <Project>{B2A5E2DA-1165-4E84-B2B3-76594E999ABF}</Project>
-      <Name>MinimumWCF.Service</Name>
+      <Name>MinimumWCF</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

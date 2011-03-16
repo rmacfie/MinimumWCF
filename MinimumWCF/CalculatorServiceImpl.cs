@@ -1,11 +1,10 @@
 ﻿using System;
-using MinimumWCF.Shared;
 
-namespace MinimumWCF.Service
+namespace MinimumWCF
 {
-	public class Calculator : ICalculator
+	public class CalculatorServiceImpl : ICalculatorService
 	{
-		#region ICalculator Members
+		#region ICalculatorService Members
 
 		public int Add(int number, int otherNumber)
 		{

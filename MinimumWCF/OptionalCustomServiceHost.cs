@@ -6,15 +6,15 @@ using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
 using System.ServiceModel.Dispatcher;
 
-namespace MinimumWCF.Service
+namespace MinimumWCF
 {
 	public class OptionalCustomServiceHost : ServiceHost, IServiceBehavior, IInstanceProvider
 	{
-		readonly Calculator _calculator;
+		readonly CalculatorServiceImpl _calculatorServiceImpl;
 
-		public OptionalCustomServiceHost(string url) : base(typeof(Calculator), new Uri(url))
+		public OptionalCustomServiceHost(string url) : base(typeof(CalculatorServiceImpl), new Uri(url))
 		{
-			_calculator = new Calculator();
+			_calculatorServiceImpl = new CalculatorServiceImpl();
 		}
 
 
@@ -45,12 +45,12 @@ namespace MinimumWCF.Service
 
 		public object GetInstance(InstanceContext instanceContext)
 		{
-			return _calculator;
+			return _calculatorServiceImpl;
 		}
 
 		public object GetInstance(InstanceContext instanceContext, Message message)
 		{
-			return _calculator;
+			return _calculatorServiceImpl;
 		}
 
 		public void ReleaseInstance(InstanceContext instanceContext, object instance)

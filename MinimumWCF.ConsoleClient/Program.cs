@@ -1,7 +1,6 @@
 ﻿using System;
-using MinimumWCF.Shared;
 
-namespace MinimumWCF.Client
+namespace MinimumWCF.ConsoleClient
 {
 	internal class Program
 	{
@@ -17,7 +16,7 @@ namespace MinimumWCF.Client
 				Console.Write("Calculating {0} + {1}", sum, input);
 
 
-				using (var calculatorProxy = new CalculatorProxy("http://localhost:12345/"))
+				using (var calculatorProxy = new CalculatorServiceProxy("http://localhost:12345/"))
 				{
 					sum = calculatorProxy.Add(input, sum);
 				}

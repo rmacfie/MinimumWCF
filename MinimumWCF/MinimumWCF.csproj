@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B2A5E2DA-1165-4E84-B2B3-76594E999ABF}</ProjectGuid>
+    <ProjectGuid>{EBA74A09-B8C4-49E8-A19C-4B264061B11F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MinimumWCF.Service</RootNamespace>
-    <AssemblyName>MinimumWCF.Service</AssemblyName>
+    <RootNamespace>MinimumWCF</RootNamespace>
+    <AssemblyName>MinimumWCF</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -36,15 +36,11 @@
     <Reference Include="System.ServiceModel" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculator.cs" />
+    <Compile Include="CalculatorServiceImpl.cs" />
+    <Compile Include="CalculatorServiceProxy.cs" />
+    <Compile Include="ICalculatorService.cs" />
     <Compile Include="OptionalCustomServiceHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MinimumWCF.Shared\MinimumWCF.Shared.csproj">
-      <Project>{EBA74A09-B8C4-49E8-A19C-4B264061B11F}</Project>
-      <Name>MinimumWCF.Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

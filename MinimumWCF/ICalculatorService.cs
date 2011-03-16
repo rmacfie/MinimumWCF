@@ -1,9 +1,9 @@
 ﻿using System.ServiceModel;
 
-namespace MinimumWCF.Shared
+namespace MinimumWCF
 {
 	[ServiceContract(Namespace = "http://MyOrg/MinimalWcf")]
-	public interface ICalculator
+	public interface ICalculatorService
 	{
 		[OperationContract]
 		int Add(int number, int otherNumber);
